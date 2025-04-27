@@ -7,6 +7,12 @@
     "module": "ESNext",
     "skipLibCheck": true,
 
+    /* need to resolve typescript error when use @ alias */
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"]
+    },
+
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
