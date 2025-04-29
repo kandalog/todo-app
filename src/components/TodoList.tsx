@@ -9,7 +9,7 @@ function TodoList() {
   return (
     <>
       {todos.map((todo: Todo) => (
-        <TodoItem {...todo} />
+        <TodoItem key={todo.id} {...todo} />
       ))}
     </>
   );
