@@ -7,7 +7,7 @@ type Props = {
 
 function MainLayout({ children }: Props) {
   return (
-    <div className="flex h-screen">
+    <div className="flex h-full">
       <Sidebar />
       <div className="border grow">
         <Header />
