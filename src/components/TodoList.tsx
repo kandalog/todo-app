@@ -1,20 +1,11 @@
 import type { Todo } from "@/domain/Todo";
 import TodoItem from "./TodoItem";
-
-const todos: Todo[] = [
-  {
-    id: "1",
-    title: "sample1",
-    completed: false,
-  },
-  {
-    id: "2",
-    title: "sample2",
-    completed: false,
-  },
-];
+import { useAtomValue } from "jotai";
+import { todosAtom } from "@/state/atoms";
 
 function TodoList() {
+  const todos = useAtomValue(todosAtom);
+
   return (
     <>
       {todos.map((todo: Todo) => (
